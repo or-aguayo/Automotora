@@ -57,6 +57,14 @@ public class Vehiculo {
         return kmRecorridos;
     }
 
+    public double getCantidadCombustible() {
+        return cantidadCombustible;
+    }
+
+    public void setCantidadCombustible(double cantidadCombustible) {
+        this.cantidadCombustible = cantidadCombustible;
+    }
+
     public void setKmRecorridos(double kmRecorridos) {
         this.kmRecorridos = kmRecorridos;
     }

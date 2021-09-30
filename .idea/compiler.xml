@@ -9,5 +9,8 @@
         <module name="Automotora" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Automotora" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

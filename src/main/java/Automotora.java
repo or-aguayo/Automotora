@@ -17,6 +17,7 @@ public class Automotora {
     public List<Vehiculo> getVehiculosVendidos() {
         return vehiculosVendidos;
     }
+
     public void añadirVehiculosPorVender(){
         this.vehiculosAVenta.add(new Vehiculo("Celerio","Gris","Suzuki",
                 2018,5000000,40000.4));
@@ -38,6 +39,16 @@ public class Automotora {
             }
         }
     }
+    public List<Vehiculo> buscarAutoNombreForBasico(String nombre){
+        List<Vehiculo> vehiculos= new ArrayList<>();
+        for(int i=0; i<this.vehiculosAVenta.size(); i++){
+            if(this.vehiculosAVenta.get(i).getNombre().equals(nombre)){
+                vehiculos.add(this.vehiculosAVenta.get(i));
+            }
+        }
+        return vehiculos;
+    }
+
     public List<Vehiculo> buscarAutoNombre(String nombre){
         List<Vehiculo> vehiculos= new ArrayList<Vehiculo>();
         for(Vehiculo auto : this.vehiculosAVenta){
@@ -47,6 +58,7 @@ public class Automotora {
         }
         return vehiculos;
         }
+
     public List<Vehiculo> buscarAutoMarca(String marca){
         List<Vehiculo> vehiculos= new ArrayList<Vehiculo>();
         for(Vehiculo auto : this.vehiculosAVenta){
@@ -62,6 +74,13 @@ public class Automotora {
                     +", color= "+auto.getColor()+", precio: "+auto.getPrecio()+", kmRecorridos: "+auto.getKmRecorridos();
             System.out.println(datos);
         }
+    }
+    public void probarSistema(){
+        Automotora automotora= new Automotora();
+        automotora.añadirVehiculosPorVender();
+        automotora.mostrarAutosLista(automotora.buscarAutoNombre("Celerio"));
+        automotora.venderAuto("Celerio",2018);
+        automotora.mostrarAutosLista(automotora.getVehiculosVendidos());
     }
     }
 
