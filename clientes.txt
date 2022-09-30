@@ -1,0 +1,4 @@
+Cliente1,Temuco,+56912345678,correo@correo.cl,11.111.111-1
+Cliente2,mi casa,1234566,correo2@correo.cl,201030382
+ClienteAuto,micasa,123478765,correo2@correo.cl,22222222-2
+oscar,casa,1245521,correo,20.103.038-2
